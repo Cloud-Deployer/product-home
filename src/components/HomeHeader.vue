@@ -24,6 +24,7 @@
                 >
                     <v-tab class="title-font" to="/about">About</v-tab>
                     <v-tab class="title-font" to="/team">Team</v-tab>
+                    <v-tab class="title-font" to="/pricing">Pricing</v-tab>
                 </v-tabs>
                 <br class="block-break"/>
             </div>

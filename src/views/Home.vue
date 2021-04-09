@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <b-carousel
             id="carousel-1"
             v-model="slide"
@@ -45,7 +45,7 @@
         Develop a platform as a service, for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty gritty details of infrastructure, allowing businesses to grow faster, smarter and better.
       </h4>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
