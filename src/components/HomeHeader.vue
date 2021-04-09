@@ -38,22 +38,20 @@
             </v-main>
         </div>
         <v-footer
-                dark
                 padless
         >
             <v-card
                     flat
                     tile
-                    class="blue lighten-2 white--text text-center"
+                    style="background-color: #F6FAFE;"
                     width="100%"
             >
                 <v-card-text class="footer-note">
-                    <strong >Get connected with us on social networks!</strong>
+                    <strong class="normal-font">Get connected with us on social networks!</strong>
                     <v-btn
                             v-for="icon in icons"
                             :key="icon"
                             class="mx-4"
-                            dark
                             icon
                     >
                         <v-icon size="24px">
@@ -61,11 +59,8 @@
                         </v-icon>
                     </v-btn>
                 </v-card-text>
-
-                <v-divider></v-divider>
-
-                <v-card-text class="white--text">
-                    {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+                <v-card-text>
+                    {{ new Date().getFullYear() }} — <strong>Ochestra</strong>
                 </v-card-text>
             </v-card>
         </v-footer>
