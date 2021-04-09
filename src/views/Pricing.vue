@@ -36,6 +36,7 @@
                 </v-card>
             </v-col>
         </v-row>
+        <v-spacer style="margin-bottom: 100px"></v-spacer>
     </v-container>
 </template>
 

@@ -37,11 +37,51 @@
 
             </v-main>
         </div>
+        <v-footer
+                dark
+                padless
+        >
+            <v-card
+                    flat
+                    tile
+                    class="blue lighten-2 white--text text-center"
+                    width="100%"
+            >
+                <v-card-text class="footer-note">
+                    <strong >Get connected with us on social networks!</strong>
+                    <v-btn
+                            v-for="icon in icons"
+                            :key="icon"
+                            class="mx-4"
+                            dark
+                            icon
+                    >
+                        <v-icon size="24px">
+                            {{ icon }}
+                        </v-icon>
+                    </v-btn>
+                </v-card-text>
+
+                <v-divider></v-divider>
+
+                <v-card-text class="white--text">
+                    {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+                </v-card-text>
+            </v-card>
+        </v-footer>
     </v-app>
 </template>
 <script>
     export default {
         name: "HomeHeader",
+        data: () => ({
+            icons: [
+                'mdi-facebook',
+                'mdi-twitter',
+                'mdi-linkedin',
+                'mdi-instagram',
+            ],
+        }),
         methods:{
             goHomePage(){
                 this.$router.push('/')
@@ -108,5 +148,12 @@
         display: flex;
         flex-direction: row;
         margin-top: 80px;
+    }
+    .footer-note{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+        align-items: baseline;
     }
 </style>
