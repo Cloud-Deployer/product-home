@@ -46,10 +46,9 @@
         data(){
             return{
                 freeTier:[
-                    "Technical support",
-                    "Unlimited access to Orchestra platform",
-                    "Reasonable amount of access for deploying apps on AWS resources"
-
+                    "Unlimited number of deployments and project updates",
+                    "Limited access to cloud providers and services",
+                    "Download your deployment configurations to local"
                 ]
             }
         }
