@@ -1,7 +1,7 @@
 <template>
     <div style="margin-top: 100px;">
         <div class="logo" @click="goHomePage">
-            <img class="logo-img-size" src="../assets/os_logo_blue_white.png"/>
+            <img class="logo-img-size" src="../assets/logo/os_logo_blue_white.png"/>
             <br class="break"/>
             <p class="logo-font">Orchestra</p>
         </div>

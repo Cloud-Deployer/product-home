@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <b-carousel
             id="carousel-1"
             v-model="slide"
@@ -15,17 +15,17 @@
     >
       <b-carousel-slide>
         <template #img>
-          <img class="d-block img-fluid w-100 img-size" src="../assets/deploy-sample-screen.png"/>
+          <img class="d-block img-fluid w-100 img-size" src="../assets/carousel/deploy-sample-screen.png"/>
         </template>
       </b-carousel-slide>
       <b-carousel-slide>
         <template #img>
-          <img class="d-block img-fluid w-100 img-size" src="../assets/tech-stack.png"/>
+          <img class="d-block img-fluid w-100 img-size" src="../assets/carousel/tech-stack.png"/>
         </template>
       </b-carousel-slide>
       <b-carousel-slide>
         <template #img>
-          <img class="d-block img-fluid w-100 img-size" src="../assets/team.png"/>
+          <img class="d-block img-fluid w-100 img-size" src="../assets/carousel/team.png"/>
         </template>
       </b-carousel-slide>
     </b-carousel>
@@ -45,7 +45,7 @@
         Develop a platform as a service, for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty gritty details of infrastructure, allowing businesses to grow faster, smarter and better.
       </h4>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>

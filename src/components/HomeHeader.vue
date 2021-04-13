@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <div style="background-color: #F6FAFE">
+        <div class="header-bar">
             <div class="header-top">
                 <div style="flex:1">
                     <br class="break"/>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="logo" @click="goHomePage">
-                <img class="logo-img-size" src="../assets/os_logo_blue_white.png"/>
+                <img class="logo-img-size" src="../assets/logo/os_logo_blue_white.png"/>
                 <br class="break"/>
                 <p class="logo-font">Orchestra</p>
             </div>
@@ -23,7 +23,8 @@
                         right
                 >
                     <v-tab class="title-font" to="/about">About</v-tab>
-                    <v-tab class="title-font" to="/documentation">Documentation</v-tab>
+                    <v-tab class="title-font" to="/team">Team</v-tab>
+                    <v-tab class="title-font" to="/pricing">Pricing</v-tab>
                 </v-tabs>
                 <br class="block-break"/>
             </div>
@@ -31,17 +32,51 @@
         </div>
         <div>
             <v-main>
-                <v-container fluid>
                     <!-- if using vue-router -->
                     <router-view/>
-                </v-container>
+
             </v-main>
         </div>
+        <v-footer
+                padless
+        >
+            <v-card
+                    flat
+                    tile
+                    style="background-color: #F6FAFE;"
+                    width="100%"
+            >
+                <v-card-text class="footer-note">
+                    <strong class="normal-font">Get connected with us on social networks!</strong>
+                    <v-btn
+                            v-for="icon in icons"
+                            :key="icon"
+                            class="mx-4"
+                            icon
+                    >
+                        <v-icon size="24px">
+                            {{ icon }}
+                        </v-icon>
+                    </v-btn>
+                </v-card-text>
+                <v-card-text>
+                    {{ new Date().getFullYear() }} — <strong>Ochestra</strong>
+                </v-card-text>
+            </v-card>
+        </v-footer>
     </v-app>
 </template>
 <script>
     export default {
         name: "HomeHeader",
+        data: () => ({
+            icons: [
+                'mdi-facebook',
+                'mdi-twitter',
+                'mdi-linkedin',
+                'mdi-instagram',
+            ],
+        }),
         methods:{
             goHomePage(){
                 this.$router.push('/')
@@ -51,6 +86,11 @@
 </script>
 
 <style scoped>
+    .header-bar{
+        background-color: #F6FAFE;
+        z-index: 100;
+        box-shadow: 0 8px 6px -6px lightgray;
+    }
     .break {
         content: "";
         margin-right: 2em;
@@ -103,5 +143,12 @@
         display: flex;
         flex-direction: row;
         margin-top: 80px;
+    }
+    .footer-note{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+        align-items: baseline;
     }
 </style>
