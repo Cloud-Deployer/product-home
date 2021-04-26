@@ -1,35 +1,72 @@
 <template>
     <v-app>
-        <div class="header-bar">
-            <div class="header-top">
-                <div style="flex:1">
-                    <br class="break"/>
-                </div>
-                <div>
-                    <router-link class="normal-font" to="/notice">Register </router-link>|
-                    <router-link class="normal-font" to="/notice">Login</router-link>
-                </div>
-            </div>
-            <div class="logo" @click="goHomePage">
+        <v-app-bar
+                style="background-color: #F6FAFE; max-height: 110px"
+        >
+            <v-toolbar-title class="logo" @click="goHomePage">
                 <img class="logo-img-size" src="../assets/logo/os_logo_blue_white.png"/>
                 <br class="break"/>
                 <p class="logo-font">Orchestra</p>
+            </v-toolbar-title>
+            <router-link class="normal-font" to="/notice">{{$t('register')}} </router-link>|
+            <router-link class="normal-font" to="/notice">{{$t('login')}}</router-link>
+            <span style="padding: 5px"></span>
+            <div style="width: 130px; height: 38px;">
+                <v-select
+                        v-model="language"
+                        :items="lang"
+                        dense
+                        solo
+                ></v-select>
             </div>
-            <div class="tab-style">
+            <v-menu
+                    v-if="isMobile"
+                    bottom
+                    left
+            >
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                            icon
+                            v-bind="attrs"
+                            v-on="on"
+                    >
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+                <v-list
+                        nav
+                        dense
+                >
+                    <v-list-item-group
+                            v-model="group"
+                            active-class="deep-purple--text text--accent-4"
+                    >
+                        <v-list-item>
+                            <v-list-item-title><router-link to="/about">{{$t('about')}}</router-link></v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-list-item-title><router-link to="/team">{{$t('team')}}</router-link></v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                            <v-list-item-title><router-link to="/pricing">{{$t('pricing')}}</router-link></v-list-item-title>
+                        </v-list-item>
+                    </v-list-item-group>
+                </v-list>
+            </v-menu>
+            <template v-slot:extension>
                 <v-tabs
+                        v-if="!isMobile"
                         exact="true"
                         exact-active-class
                         background-color="#F6FAFE"
-                        right
+                        centered
                 >
-                    <v-tab class="title-font" to="/about">About</v-tab>
-                    <v-tab class="title-font" to="/team">Team</v-tab>
-                    <v-tab class="title-font" to="/pricing">Pricing</v-tab>
+                    <v-tab class="title-font" to="/about">{{$t('about')}}</v-tab>
+                    <v-tab class="title-font" to="/team">{{$t('team')}}</v-tab>
+                    <v-tab class="title-font" to="/pricing">{{$t('pricing')}}</v-tab>
                 </v-tabs>
-                <br class="block-break"/>
-            </div>
-
-        </div>
+            </template>
+        </v-app-bar>
         <div>
             <v-main>
                     <!-- if using vue-router -->
@@ -47,7 +84,7 @@
                     width="100%"
             >
                 <v-card-text class="footer-note">
-                    <strong class="normal-font">Get connected with us on social networks!</strong>
+                    <strong class="normal-font">{{$t('contactMsg')}}</strong>
                     <v-btn
                             v-for="icon in icons"
                             :key="icon"
@@ -67,6 +104,8 @@
     </v-app>
 </template>
 <script>
+    // import Vue from 'vue'
+    // import i18n from '../plugins/i18n.js'
     export default {
         name: "HomeHeader",
         data: () => ({
@@ -76,35 +115,87 @@
                 'mdi-linkedin',
                 'mdi-instagram',
             ],
+            isMobile: false,
+            group: null,
+            language: 0,
+            lang: [
+                {
+                    text: 'English',
+                    value: 0
+                },
+                {
+                    text: '中文',
+                    value: 1
+                },
+                {
+                    text: 'Español',
+                    value: 2
+                },
+
+            ],
         }),
         methods:{
             goHomePage(){
                 this.$router.push('/')
+            },
+            onResize(){
+                this.isMobile = window.innerWidth < 700
             }
-        }
+        },
+        created: function(){
+            this.isMobile = false
+        },
+        beforeDestroy () {
+            if (typeof window === 'undefined') return
+            window.removeEventListener('resize', this.onResize, { passive: true })
+        },
+        mounted () {
+            this.onResize();
+            window.addEventListener('resize', this.onResize, { passive: true })
+            switch(this.$i18n.locale){
+                case 'en':
+                    this.language = 0;
+                    break;
+                case 'cn':
+                    this.language = 1;
+                    break;
+                case 'sp':
+                    this.language = 2;
+                    break;
+                default:
+                    break;
+            }
+
+        },
+        watch: {
+            language: function (val) {
+                switch(val){
+                    case 0:
+                        this.$i18n.locale = 'en';
+                        break;
+                    case 1:
+                        this.$i18n.locale = 'cn';
+                        break;
+                    case 2:
+                        this.$i18n.locale = 'sp';
+                        break;
+                    default:
+                        break;
+                }
+            }
+        },
     }
 </script>
 
 <style scoped>
-    .header-bar{
-        background-color: #F6FAFE;
-        z-index: 100;
-        box-shadow: 0 8px 6px -6px lightgray;
-    }
     .break {
         content: "";
         margin-right: 2em;
         display: block;
         font-size: 24%;
     }
-    .block-break {
-        content: "";
-        margin-right: 100em;
-        display: block;
-        font-size: 24%;
-    }
     .logo-font{
-        font-size:72px;
+        font-size:60px;
         font-weight: bold;
         font-family: "Lucida Grande",serif;
         color: #403D3B;
@@ -125,24 +216,33 @@
         display: flex;
         flex-direction: row;
         align-items:baseline;
-        margin-left: 10%;
-        position: absolute;
-        z-index: 50;
-    }
-    .header-top{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 10px;
+        margin-top: 20px;
+        margin-left: 5%;
     }
     .logo-img-size{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
-    .tab-style{
-        display: flex;
-        flex-direction: row;
-        margin-top: 80px;
+    @media (max-width: 700px) {
+        .logo-img-size{
+            width: 40px;
+            height: 40px;
+        }
+        .logo-font{
+            visibility: hidden;
+        }
+    }
+    @media (min-width: 700px) and (max-width: 1200px) {
+        .logo-img-size{
+            width: 40px;
+            height: 40px;
+        }
+        .logo-font{
+            font-size:40px;
+            font-weight: bold;
+            font-family: "Lucida Grande",serif;
+            color: #403D3B;
+        }
     }
     .footer-note{
         display: flex;

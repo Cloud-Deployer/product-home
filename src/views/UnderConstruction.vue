@@ -5,7 +5,7 @@
             <br class="break"/>
             <p class="logo-font">Orchestra</p>
         </div>
-        <h1 class="title-font">Our website is under construction right now, please come back later, thank you!</h1>
+        <h1 class="title-font">{{$t('constructionMsg')}}</h1>
     </div>
 </template>
 
