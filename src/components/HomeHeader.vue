@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-app-bar
-                style="background-color: #F6FAFE"
+                style="background-color: #F6FAFE; max-height: 110px"
         >
             <v-toolbar-title class="logo" @click="goHomePage">
                 <img class="logo-img-size" src="../assets/logo/os_logo_blue_white.png"/>
