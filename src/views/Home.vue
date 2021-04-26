@@ -30,20 +30,14 @@
       </b-carousel-slide>
     </b-carousel>
     <div class="container text-sm-left" style="margin-top: 50px; margin-bottom: 50px">
-      <h3>Project Overview</h3>
-      <h4>
-        Deploying your project can be very cumbersome and confusing, especially for those who are inexperienced with deployment frameworks. Additionally, developing a deployment pipeline requires time and effort on the developers side, along with the necessity of maintaining the infrastructure. Our web application strives to automate the deployment process and abstract away the underlying details about deployment from start to finish. A user will be able to deploy multiple images that will have cross-container communication via automated orchestration tools. Additionally, we provide real-time monitoring of the provided infrastructure for users to view deployment progress and up to date statistics.
-      </h4>
+      <h3>{{$t('overview')}}</h3>
+      <h4>{{$t('overviewContent')}}</h4>
       <p class="text-break" style="max-width: 4rem;"/>
-      <h3>Buesiness Use Cases</h3>
-      <h4>
-        Developers don't need to worry about the infrastructure needed for Cloud deployment. No manual configuration required like, auto scaling can be built in. Manage deployment status of multiple projects in one place. Bringing together a single deployment model for different kinds of projects. Takes care of full stack deployment. (different components of the product like backend, frontend)
-      </h4>
+      <h3>{{$t('usecase')}}</h3>
+      <h4>{{$t('usecaseContent')}}</h4>
       <p class="text-break" style="max-width: 4rem;"/>
-      <h3>Goal</h3>
-      <h4>
-        Develop a platform as a service, for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty gritty details of infrastructure, allowing businesses to grow faster, smarter and better.
-      </h4>
+      <h3>{{$t('goal')}}</h3>
+      <h4>{{$t('goalContent')}}</h4>
     </div>
   </v-container>
 </template>

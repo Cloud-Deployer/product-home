@@ -11,8 +11,8 @@
                   v-for="item in items"
                   :key="item.name"
                   cols="12"
-                  sm="4"
-                  md="4"
+                  sm="12"
+                  md="6"
                   lg="6"
           >
             <v-card
@@ -58,8 +58,8 @@
                   v-for="item in items"
                   :key="item.name"
                   cols="12"
-                  sm="4"
-                  md="4"
+                  sm="12"
+                  md="6"
                   lg="6"
           >
             <v-card
@@ -105,8 +105,8 @@
                   v-for="item in items"
                   :key="item.name"
                   cols="12"
-                  sm="4"
-                  md="4"
+                  sm="12"
+                  md="6"
                   lg="6"
           >
             <v-card
@@ -152,8 +152,8 @@
                   v-for="item in items"
                   :key="item.name"
                   cols="12"
-                  sm="4"
-                  md="4"
+                  sm="12"
+                  md="6"
                   lg="6"
           >
             <v-card
