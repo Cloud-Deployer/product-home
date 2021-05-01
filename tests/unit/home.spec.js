@@ -1,7 +1,6 @@
 import { shallowMount,} from '@vue/test-utils'
 import Home from "./../../src/views/Home.vue"
-import {BootstrapVue} from "bootstrap-vue";
-import Vuetify from 'vuetify'
+import {localVue, i18n, router} from './TestUtils'
 
 describe("App", () => {
     // Inspect the raw component options
@@ -10,15 +9,10 @@ describe("App", () => {
     });
 });
 
-
 describe("Mounted App", () => {
-    let localVue;
     let wrapper;
     beforeAll(() => {
-        localVue = require('vue');
-        localVue.use(Vuetify);
-        localVue.use(BootstrapVue);
-        wrapper = shallowMount(Home, { localVue });
+        wrapper = shallowMount(Home, { localVue, i18n, router });
     });
 
     test("is a Vue instance", () => {

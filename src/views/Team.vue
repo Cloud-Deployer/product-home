@@ -27,8 +27,8 @@
                   <v-img width="100%" :src="item.picture" />
                 </v-avatar>
                 <v-card-text class="justify-space-between">
-                  <h4>{{item.name}}</h4>
-                  <h5>{{item.role}}</h5>
+                  <h4 class="name-font">{{item.name}}</h4>
+                  <h5 class="role-font">{{item.role}}</h5>
                   <a :href="item.linkedin_link" target="_blank">
                     <svg color="rgb(10,102,194)" width="28" height="28" viewBox="0 0 34 34" class="global-nav__logo">
                       <title>
@@ -74,8 +74,8 @@
                   <v-img width="100%" :src="item.picture" />
                 </v-avatar>
                 <v-card-text class="justify-space-between">
-                  <h4>{{ item.name }}</h4>
-                  <h5>{{item.role}}</h5>
+                  <h4 class="name-font">{{ item.name }}</h4>
+                  <h5 class="role-font">{{item.role}}</h5>
                   <a :href="item.linkedin_link" target="_blank">
                     <svg color="rgb(10,102,194)" width="28" height="28" viewBox="0 0 34 34" class="global-nav__logo">
                       <title>
@@ -121,8 +121,8 @@
                   <v-img width="100%" :src="item.picture" />
                 </v-avatar>
                 <v-card-text class="justify-space-between">
-                  <h4>{{ item.name }}</h4>
-                  <h5>{{item.role}}</h5>
+                  <h4 class="name-font">{{ item.name }}</h4>
+                  <h5 class="role-font">{{item.role}}</h5>
                   <a :href="item.linkedin_link" target="_blank">
                     <svg color="rgb(10,102,194)" width="28" height="28" viewBox="0 0 34 34" class="global-nav__logo">
                       <title>
@@ -168,8 +168,8 @@
                   <v-img width="100%" :src="item.picture" />
                 </v-avatar>
                 <v-card-text class="justify-space-between">
-                  <h4>{{ item.name }}</h4>
-                  <h5>{{item.role}}</h5>
+                  <h4 class="name-font">{{ item.name }}</h4>
+                  <h5 class="role-font">{{item.role}}</h5>
                   <a :href="item.linkedin_link" target="_blank">
                     <svg color="rgb(10,102,194)" width="28" height="28" viewBox="0 0 34 34" class="global-nav__logo">
                       <title>
@@ -245,7 +245,7 @@
                   "name": "Nikhil Bhutani",
                   "linkedin_link": "https://www.linkedin.com/in/bhutani1991/",
                   "picture": "https://github.com/Cloud-Deployer/product-home/raw/dev/src/assets/team/nikhil_profile.jpeg",
-                  "role":"UI, Backend",
+                  "role":"UI, Backend, Devops",
                 },
 
               ],
@@ -276,6 +276,9 @@
 </script>
 
 <style scoped>
+  @import url('https://fonts.googleapis.com/css?family=Nova Flat');
+  @import url('https://fonts.googleapis.com/css?family=Dekko');
+
   .team-container{
     position: relative;
     padding: 100px;
@@ -290,5 +293,16 @@
     bottom: 0px;
     /*filter: blur(5px);*/
     opacity: 0.3;
+  }
+  .name-font{
+    font-family: 'Nova Flat';
+    font-size: 36px;
+    color: #403D3B;
+  }
+  .role-font{
+    font-family: 'Nova Flat';
+    font-size: 22px;
+    font-weight: bold;
+    color: #403D3B;
   }
 </style>

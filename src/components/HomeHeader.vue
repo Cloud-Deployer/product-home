@@ -59,6 +59,7 @@
                         exact="true"
                         exact-active-class
                         background-color="#F6FAFE"
+                        :key="tabKey"
                         centered
                 >
                     <v-tab class="title-font" to="/about">{{$t('about')}}</v-tab>
@@ -133,6 +134,7 @@
                 },
 
             ],
+            tabKey: 0,
         }),
         methods:{
             goHomePage(){
@@ -172,12 +174,15 @@
                 switch(val){
                     case 0:
                         this.$i18n.locale = 'en';
+                        this.tabKey += 1;
                         break;
                     case 1:
                         this.$i18n.locale = 'cn';
+                        this.tabKey += 1;
                         break;
                     case 2:
                         this.$i18n.locale = 'sp';
+                        this.tabKey += 1;
                         break;
                     default:
                         break;

@@ -18,6 +18,6 @@ module.exports = {
         usecase:'Business Use Cases',
         usecaseContent:'Developers don\'t need to worry about the infrastructure needed for Cloud deployment. No manual configuration required like, auto scaling can be built in. Manage deployment status of multiple projects in one place. Bringing together a single deployment model for different kinds of projects. Takes care of full stack deployment. (different components of the product like backend, frontend)\n',
         goal:'Our Goal',
-        goalContent:'Develop a platform as a service, for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty gritty details of infrastructure, allowing businesses to grow faster, smarter and better.\n',
+        goalContent:'Our goal is to provide the best service for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty-gritty details of infrastructure, allowing businesses to grow faster, smarter and better.\n',
     }
 };
