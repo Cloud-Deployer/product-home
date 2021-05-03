@@ -158,10 +158,10 @@
                 case 'en':
                     this.language = 0;
                     break;
-                case 'cn':
+                case 'zh':
                     this.language = 1;
                     break;
-                case 'sp':
+                case 'es':
                     this.language = 2;
                     break;
                 default:
@@ -177,11 +177,11 @@
                         this.tabKey += 1;
                         break;
                     case 1:
-                        this.$i18n.locale = 'cn';
+                        this.$i18n.locale = 'zh';
                         this.tabKey += 1;
                         break;
                     case 2:
-                        this.$i18n.locale = 'sp';
+                        this.$i18n.locale = 'es';
                         this.tabKey += 1;
                         break;
                     default:

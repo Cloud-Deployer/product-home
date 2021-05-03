@@ -1,5 +1,5 @@
 module.exports = {
-  cn: {
+  zh: {
     login: '登录',
     register: '注册',
     about: '关于',
