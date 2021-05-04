@@ -1,5 +1,5 @@
 module.exports = {
-    sp: {
+    es: {
         login: 'Acceso',
         register: 'Registrarse',
         about: 'Acerca de',

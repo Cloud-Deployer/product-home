@@ -8,8 +8,10 @@
                 <br class="break"/>
                 <p class="logo-font">Orchestra</p>
             </v-toolbar-title>
-            <router-link class="normal-font" to="/notice">{{$t('register')}} </router-link>|
-            <router-link class="normal-font" to="/notice">{{$t('login')}}</router-link>
+<!--            <a :href="`http://orchestra-deployer.com:8080/#/register`" class="normal-font" >{{$t('register')}} </a> |-->
+<!--            <a :href="`http://orchestra-deployer.com:8080/#/login`" class="normal-font">{{$t('login')}}</a>-->
+            <router-link to="/notice" class="normal-font" >{{$t('register')}} </router-link> |
+            <router-link to="/notice" class="normal-font">{{$t('login')}}</router-link>
             <span style="padding: 5px"></span>
             <div style="width: 130px; height: 38px;">
                 <v-select
@@ -59,6 +61,7 @@
                         exact="true"
                         exact-active-class
                         background-color="#F6FAFE"
+                        :key="tabKey"
                         centered
                 >
                     <v-tab class="title-font" to="/about">{{$t('about')}}</v-tab>
@@ -133,6 +136,7 @@
                 },
 
             ],
+            tabKey: 0,
         }),
         methods:{
             goHomePage(){
@@ -156,10 +160,10 @@
                 case 'en':
                     this.language = 0;
                     break;
-                case 'cn':
+                case 'zh':
                     this.language = 1;
                     break;
-                case 'sp':
+                case 'es':
                     this.language = 2;
                     break;
                 default:
@@ -172,12 +176,15 @@
                 switch(val){
                     case 0:
                         this.$i18n.locale = 'en';
+                        this.tabKey += 1;
                         break;
                     case 1:
-                        this.$i18n.locale = 'cn';
+                        this.$i18n.locale = 'zh';
+                        this.tabKey += 1;
                         break;
                     case 2:
-                        this.$i18n.locale = 'sp';
+                        this.$i18n.locale = 'es';
+                        this.tabKey += 1;
                         break;
                     default:
                         break;
