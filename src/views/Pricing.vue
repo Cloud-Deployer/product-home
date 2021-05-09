@@ -1,13 +1,12 @@
 <template>
-    <v-container>
-<!--        <div class="team-backgroud"/>-->
+    <v-container class="container-height">
         <v-row style="margin-top: 80px; height:400px">
             <v-col>
                 <v-card
                         width="100%"
                         height="100%"
                 >
-                    <h3 class = free-tag>FREE</h3>
+                    <h3 class = free-tag>{{$t('free')}}</h3>
                     <v-card-text style="margin:50px; text-align: left;">
                         <ul>
                             <v-data-iterator
@@ -21,17 +20,17 @@
                         </ul>
                     </v-card-text>
                     <router-link class="register-tag" to="/notice">
-                        Register Now
+                        {{$t('registerNow')}}
                     </router-link>
                 </v-card>
             </v-col>
             <v-col>
-                <p class="coming-soon">COMING SOON</p>
+                <p class="coming-soon">{{$t('comingSoon')}}</p>
                 <v-card
                         width="100%"
                         height="100%"
                 >
-                    <h3 class = vip-tag>VIP</h3>
+                    <h3 class = vip-tag>{{$t('vip')}}</h3>
                     <v-card-text></v-card-text>
                 </v-card>
             </v-col>
@@ -43,15 +42,15 @@
 <script>
     export default {
         name: "Pricing",
-        data(){
-            return{
-                freeTier:[
-                    "Unlimited number of deployments and project updates",
-                    "Limited access to cloud providers and services",
-                    "Download your deployment configurations to local"
+        computed:{
+            freeTier(){
+                return [
+                    this.$i18n.t('unlimited'),
+                    this.$i18n.t('limitAccess'),
+                    this.$i18n.t('download'),
                 ]
             }
-        }
+        },
     }
 </script>
 
@@ -99,5 +98,8 @@
     font-weight: bold;
     font-size: 80px;
     transform: rotate(-20deg);
+}
+.container-height{
+    height: 100vh;
 }
 </style>
