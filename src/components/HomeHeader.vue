@@ -11,8 +11,6 @@
             </v-toolbar-title>
             <a :href="`http://orchestra-deployer.com:8080/#/register`" class="normal-font" >{{$t('register')}} </a> |
             <a :href="`http://orchestra-deployer.com:8080/#/login`" class="normal-font">{{$t('login')}}</a>
-<!--            <router-link to="/notice" class="normal-font" >{{$t('register')}} </router-link> |-->
-<!--            <router-link to="/notice" class="normal-font">{{$t('login')}}</router-link>-->
             <span style="padding: 5px"></span>
             <div style="width: 130px; height: 38px;">
                 <v-select
