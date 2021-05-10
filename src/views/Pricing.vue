@@ -19,9 +19,10 @@
                             </v-data-iterator>
                         </ul>
                     </v-card-text>
-                    <router-link class="register-tag" to="/notice">
-                        {{$t('registerNow')}}
-                    </router-link>
+<!--                    <router-link class="register-tag" to="/notice">-->
+<!--                        {{$t('registerNow')}}-->
+<!--                    </router-link>-->
+                    <a href="http://orchestra-deployer.com:8080/#/register" class="register-tag" >{{$t('registerNow')}} </a>
                 </v-card>
             </v-col>
             <v-col>
