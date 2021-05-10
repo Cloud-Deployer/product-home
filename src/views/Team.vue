@@ -1,6 +1,5 @@
 <template>
   <div class=" text-sm-left team-container">
-    <div class="team-backgroud"/>
     <v-data-iterator
             :items="teamFile.teamlead"
             hide-default-footer
@@ -282,17 +281,6 @@
   .team-container{
     position: relative;
     padding: 100px;
-  }
-  .team-backgroud{
-    background-image: url("../assets/logo/bg-logo-pattern.jpeg");
-    background-repeat: repeat;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    /*filter: blur(5px);*/
-    opacity: 0.3;
   }
   .name-font{
     font-family: 'Nova Flat';

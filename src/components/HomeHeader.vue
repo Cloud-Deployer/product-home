@@ -1,5 +1,6 @@
 <template>
     <v-app>
+        <div class="team-backgroud"/>
         <v-app-bar
                 style="background-color: #F6FAFE; max-height: 110px"
         >
@@ -8,10 +9,8 @@
                 <br class="break"/>
                 <p class="logo-font">Orchestra</p>
             </v-toolbar-title>
-<!--            <a :href="`http://orchestra-deployer.com:8080/#/register`" class="normal-font" >{{$t('register')}} </a> |-->
-<!--            <a :href="`http://orchestra-deployer.com:8080/#/login`" class="normal-font">{{$t('login')}}</a>-->
-            <router-link to="/notice" class="normal-font" >{{$t('register')}} </router-link> |
-            <router-link to="/notice" class="normal-font">{{$t('login')}}</router-link>
+            <a :href="`http://orchestra-deployer.com:8080/#/register`" class="normal-font" >{{$t('register')}} </a> |
+            <a :href="`http://orchestra-deployer.com:8080/#/login`" class="normal-font">{{$t('login')}}</a>
             <span style="padding: 5px"></span>
             <div style="width: 130px; height: 38px;">
                 <v-select
@@ -79,6 +78,7 @@
         </div>
         <v-footer
                 padless
+                bottom
         >
             <v-card
                     flat
@@ -257,5 +257,17 @@
         font-size: 18px;
         font-weight: bold;
         align-items: baseline;
+    }
+    .team-backgroud{
+        background-image: url("../assets/logo/bg-logo-pattern.jpeg");
+        background-repeat: repeat;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        /*filter: blur(5px);*/
+        opacity: 0.1;
+        height: 100%;
     }
 </style>
