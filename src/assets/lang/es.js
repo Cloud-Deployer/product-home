@@ -7,25 +7,28 @@ module.exports = {
         pricing:'Precios',
         constructionMsg: 'El servicio actual está en mantenimiento, inténtelo de nuevo más tarde, ¡gracias!',
         contactMsg: '¡Bienvenido a seguir nuestra cuenta pública!',
-        overview:'Project Overview',
-        overviewContent:'Deploying your project can be very cumbersome and confusing, especially for those who are inexperienced ' +
-            'with deployment frameworks. Additionally, developing a deployment pipeline requires time and effort on the developers ' +
-            'side, along with the necessity of maintaining the infrastructure. Our web application strives to automate the deployment' +
-            ' process and abstract away the underlying details about deployment from start to finish. ' +
-            'A user will be able to deploy multiple images that will have cross-container communication via automated orchestration tools. ' +
-            'Additionally, we provide real-time monitoring of the provided infrastructure for users to view deployment progress ' +
-            'and up to date statistics.',
-        usecase:'Business Use Cases',
-        usecaseContent:'Developers don\'t need to worry about the infrastructure needed for Cloud deployment. No manual configuration required like, auto scaling can be built in. Manage deployment status of multiple projects in one place. Bringing together a single deployment model for different kinds of projects. Takes care of full stack deployment. (different components of the product like backend, frontend)\n',
-        goal:'Our Goal',
-        goalContent:'Develop a platform as a service, for businesses and individuals alike to focus on what they do best, with better resources, without worrying about the nitty gritty details of infrastructure, allowing businesses to grow faster, smarter and better.\n',
-        i18n: 'I18N Support Is Here',
-        i18nContent: 'You can choose your language on our platform to begin and enjoy your app deployment journey',
-        unlimited: "Unlimited number of deployments and project updates",
-        limitAccess: "Limited access to cloud providers and services",
-        download: "Download your deployment configurations to local",
-        registerNow:'Register Now',
-        free: 'FREE',
+        overview:'Descripción del proyecto',
+        overviewContent:'La implementación de su proyecto puede ser muy engorrosa y confusa, especialmente para aquellos que no tienen experiencia con los marcos de implementación. ' +
+            'Además, desarrollar una canalización de implementación requiere tiempo y esfuerzo por parte de los desarrolladores, junto con la necesidad de mantener la infraestructura. ' +
+            'Nuestra aplicación web se esfuerza por automatizar el proceso de implementación y abstraer los detalles subyacentes sobre la implementación de principio a fin. ' +
+            'Un usuario podrá implementar múltiples imágenes que tendrán comunicación entre contenedores a través de herramientas de orquestación automatizadas. ' +
+            'Además, proporcionamos monitoreo en tiempo real de la infraestructura proporcionada para que los usuarios vean el progreso de la implementación y las estadísticas actualizadas.',
+        usecase:'Casos de uso empresarial',
+        usecaseContent:'Los desarrolladores no necesitan preocuparse por la infraestructura necesaria para la implementación de la nube. ' +
+            'No se requiere configuración manual, como el escalado automático, se puede integrar. ' +
+            'Administre el estado de implementación de varios proyectos en un solo lugar. Reuniendo un solo modelo de implementación para diferentes tipos de proyectos. ' +
+            'Se encarga de la implementación de la pila completa. (diferentes componentes del producto como backend, frontend)',
+        goal:'Nuestro objetivo',
+        goalContent:'Desarrollar una plataforma como servicio, para que tanto las empresas como las personas se centren ' +
+            'en lo que hacen mejor, con mejores recursos, sin preocuparse por los detalles esenciales de la infraestructura, ' +
+            'lo que permite a las empresas crecer más rápido, más inteligente y mejor.',
+        i18n: 'El soporte de I18N está aquí',
+        i18nContent: 'Puede elegir su idioma en nuestra plataforma para comenzar y disfrutar de su viaje de implementación de aplicaciones',
+        unlimited: "Número ilimitado de implementaciones y actualizaciones de proyectos",
+        limitAccess: "Acceso limitado a proveedores y servicios en la nube",
+        download: "Descargue sus configuraciones de implementación a local",
+        registerNow:'Regístrate ahora',
+        free: 'SERVICIO GRATUITO',
         vip: 'VIP',
         comingSoon: 'COMING SOON'
     }

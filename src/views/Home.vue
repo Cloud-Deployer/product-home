@@ -155,8 +155,8 @@
   .slide-style{
     display: flex;
     justify-content: center;
-    max-height: 700px;
-    min-height: 700px;
+    max-height: 600px;
+    min-height: 600px;
   }
   .slide1-style{
     display: flex;
