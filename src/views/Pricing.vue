@@ -85,10 +85,10 @@
     position: absolute;
     background-color: lightgray;
     border-radius: 10px;
-    width: 550px;
+    width: 30vw;
     height: 250px;
     top: 70px;
-    left: 25px;
+    left: 5vw;
     right: 0px;
     bottom: 0px;
     z-index: 20;

@@ -13,7 +13,7 @@
               indicators
               background="#ababab"
               img-width="1024"
-              style="text-shadow: 1px 1px 2px #333; max-height: 640px; width: 1024px"
+              style="text-shadow: 1px 1px 2px #333; min-height: 600px; max-height: 600px; width: 1024px"
               @sliding-start="onSlideStart"
               @sliding-end="onSlideEnd"
       >
@@ -41,13 +41,13 @@
       <b-carousel
               id="carousel-1"
               v-model="slide1"
-              :interval="7000"
+              :interval="5500"
               controls
               indicators
               background="#ababab"
               img-width="1024"
 
-              style="text-shadow: 1px 1px 2px #333; max-height: 640px; width: 1024px"
+              style="text-shadow: 1px 1px 2px #333; min-height: 600px; max-height: 600px; width: 1024px"
               @sliding-start="onSlideStart1"
               @sliding-end="onSlideEnd1"
       >
@@ -141,7 +141,7 @@
   @import url("https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet");
   .img-size{
     width: 1024px;
-    max-height: 550px;
+    max-height: 600px;
   }
   .content-text{
     font-family: 'Didact Gothic';
@@ -155,18 +155,20 @@
   .slide-style{
     display: flex;
     justify-content: center;
-    max-height: 700px;
+    max-height: 600px;
+    min-height: 600px;
   }
   .slide1-style{
     display: flex;
     justify-content: center;
-    max-height: 700px;
-    min-height: 700px;
+    max-height: 600px;
+    min-height: 600px;
   }
   .slide2-style{
     display: flex;
     justify-content: center;
-    max-height: 900px;
+    max-height: 600px;
+    min-height: 600px;
   }
   .text-box{
     margin-top: 60px;
