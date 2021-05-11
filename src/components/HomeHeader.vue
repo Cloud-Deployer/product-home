@@ -100,7 +100,7 @@
                     </v-btn>
                 </v-card-text>
                 <v-card-text>
-                    {{ new Date().getFullYear() }} — <strong>Ochestra</strong>
+                    {{ new Date().getFullYear() }} — <strong>Orchestra</strong>
                 </v-card-text>
             </v-card>
         </v-footer>
